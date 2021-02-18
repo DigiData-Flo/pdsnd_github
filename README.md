@@ -6,6 +6,8 @@ Bikeshare Project Data - Analysis
 
 ### Description
 This Project do some descriptive statistics on bike share data.
+There is an user interface to choose the city, the user want to analyse.
+
 
 ### Files used
 #### Python Code
