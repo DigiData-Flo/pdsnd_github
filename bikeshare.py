@@ -334,7 +334,7 @@ def station_stats(df):
     end_station_count = len(df['End Station'].value_counts())
     station_count_str = 'There are {} start stations and {} end stations in the dataset' \
         .format(start_station_count, end_station_count)
-    print(station_count_str)
+    print(station_count_str,'\n')
 
     df_station['Start Station'].sort_values(ascending=False)
     popular_start = df_station['Start Station'].idxmax()
@@ -345,7 +345,7 @@ def station_stats(df):
 
     start_station_str = 'The most popular start station is {} with {} starts at this station and {} \
 ends at this station'.format(popular_start, popular_departure, popular_arrival)
-    print(start_station_str)
+    print(start_station_str, '\n')
 
     df_station['End Station'].sort_values(ascending=False)
     popular_end = df_station['End Station'].idxmax()
@@ -355,7 +355,7 @@ ends at this station'.format(popular_start, popular_departure, popular_arrival)
         popular_departure = 0
     start_station_str = 'The most popular end station is {} with {} arrives at this station and {} \
 starts from this station'.format(popular_end, popular_arrival, popular_departure)
-    print(start_station_str)
+    print(start_station_str, '\n')
 
     df_station.fillna(0, inplace=True)
     df_station['Difference'] = df_station['End Station'] - df_station['Start Station']
