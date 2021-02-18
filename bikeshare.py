@@ -42,6 +42,7 @@ def get_filters():
     filt = ''
     time_filt = ['Month', 'Day', 'Both', 'No']
 
+    '''Outer try block to catch different keyboard interruptions'''
     try:
         city = ''
         month = ''
