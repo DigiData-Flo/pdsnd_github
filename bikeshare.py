@@ -50,7 +50,7 @@ def get_filters():
 
             print('Please select one of the following cities.')
             print('Washington, Chicago, New York City')
-            city = input("Please enter the city you wish to analyse: ").lower()
+            city = input("Please enter the city you wish to analyse: ").lower().strip()
 
             if city not in CITY_DATA:
                 print('Unknown city')
@@ -60,7 +60,7 @@ def get_filters():
             print('Do you want to use a time filter?')
             print('Please choose one of the following filters.')
             print('Month, Day, Both or No for no filter')
-            filt = input('Your filt please: ').title()
+            filt = input('Your filt please: ').title().strip()
 
             if filt not in time_filt:
                 print('Unknown Filter')
@@ -68,26 +68,26 @@ def get_filters():
 
         if filt == 'Both':
             while month not in MONTH_DATA:
-                month = input("Please enter one month from January to June and press enter: ").lower()
+                month = input("Please enter one month from January to June and press enter: ").lower().strip()
                 if month not in MONTH_DATA:
                     print('Unknown month')
                     print('Please try again or break the program with command+D')
             while day not in DAY_DATA:
-                day = input("Please enter a weekday and press enter: ").lower()
+                day = input("Please enter a weekday and press enter: ").lower().strip()
                 if day not in DAY_DATA:
                     print('Unknown weekday')
                     print('Please try again or break the program with command+D')
 
         if filt == 'Month':
             while month not in MONTH_DATA:
-                month = input("Please enter one month from January to June and press enter: ").lower()
+                month = input("Please enter one month from January to June and press enter: ").lower().strip()
                 if month not in MONTH_DATA:
                     print('Unknown month')
                     print('Please try again or break the program with command+D')
 
         if filt == 'Day':
             while day not in DAY_DATA:
-                day = input("Please enter a weekday and press enter: ").lower()
+                day = input("Please enter a weekday and press enter: ").lower().strip()
                 if day not in DAY_DATA:
                     print('Unknown weekday')
                     print('Please try again or break the program with command+D')
